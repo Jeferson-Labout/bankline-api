@@ -2,6 +2,7 @@ package com.jeferson.santander.bankline.api.model;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
@@ -21,6 +22,18 @@ public class Movimentacao {
 	
 	@Enumerated
 	private MovimentacaoTipo tipo;
+	
+	@Column(name = "id_conta")
+	private Long idConta;
+	
+	public Long getIdConta() {
+		return idConta;
+	}
+
+	public void setIdConta(Long long1) {
+		this.idConta = long1;
+	}
+
 
 	public Long getId() {
 		return id;
